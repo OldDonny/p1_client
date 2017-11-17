@@ -3,17 +3,17 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { HomeviewComponent } from './homeview/homeview.component';
-import { ListviewComponent } from './listview/listview.component';
-import { SignviewComponent } from './signview/signview.component';
-import { SigninformComponent } from './signinform/signinform.component';
-import { SignupformComponent } from './signupform/signupform.component';
-import { ChirpformComponent } from './chirpform/chirpform.component';
-import { ListComponent } from './list/list.component';
-import { SingleComponent } from './single/single.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { FooterComponent } from './footer/footer.component';
-import { UserinfoComponent } from './userinfo/userinfo.component';
+import { HomeviewComponent } from './views/homeview/homeview.component';
+import { ListviewComponent } from './views/listview/listview.component';
+import { SignviewComponent } from './views/signview/signview.component';
+import { SigninformComponent } from './forms/signinform/signinform.component';
+import { SignupformComponent } from './forms/signupform/signupform.component';
+import { ChirpformComponent } from './forms/chirpform/chirpform.component';
+import { ListComponent } from './items/list/list.component';
+import { SingleComponent } from './items/single/single.component';
+import { NavbarComponent } from './items/navbar/navbar.component';
+import { FooterComponent } from './items/footer/footer.component';
+import { UserinfoComponent } from './items/userinfo/userinfo.component';
 
 @NgModule({
   declarations: [
