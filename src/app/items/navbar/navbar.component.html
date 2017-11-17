@@ -1,3 +1,30 @@
-<p>
-  navbar works!
-</p>
+<mat-toolbar id="toolbarcolor">
+  <span>
+    <img id="birdlogo" src="http://www.aberke.com/static/img/twitter_bird.png">
+  </span>
+    <h1 id="titlecolor">Chirper</h1>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+      <i class="material-icons menu-tab">menu</i>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <i class="material-icons inside-menu">send</i>
+        <span>New Chirp</span>
+      </button>
+      <button mat-menu-item>
+          <i class="material-icons inside-menu">notifications</i>
+        <span>Notifications</span>
+      </button>
+      <button mat-menu-item>
+          <i class="material-icons inside-menu">message</i>
+        <span>Messages</span>
+      </button>
+      <button mat-menu-item>
+          <i class="material-icons inside-menu">exit_to_app</i>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+
+</mat-toolbar>
+
