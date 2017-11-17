@@ -15,8 +15,8 @@ export class ChirpsService {
       .get(ChirpsService.api)
   }
   getChirpsByUser(userId:number):Observable<any>{
-    return this.htpp
-      .get(`${ChirpsService.ap}`)
+    return this.http
+      .get(`${ChirpsService.api}`)
   }
   getChirp(id:number): Observable<any>{
     return this.http
