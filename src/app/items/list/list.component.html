@@ -1,3 +1,7 @@
-<p>
-  list works!
-</p>
+<h2>DASHBOARD</h2>
+
+<mat-card *ngFor='let chirp of chirps'>
+  <mat-card-title>{{chirp.name}}</mat-card-title>
+  <mat-card-subtitle>@{{chirp.username}}</mat-card-subtitle>
+  <mat-card-content><p>{{chirp.message}}</p></mat-card-content>
+</mat-card>

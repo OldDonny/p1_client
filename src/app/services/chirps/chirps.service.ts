@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
-import {Observable} from 'rxjs/Rx'
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs/Rx'
 
 import 'rxjs/add/operator/map'
 
@@ -11,25 +11,18 @@ export class ChirpsService {
 
   constructor(private http: HttpClient) { }
 
-
   getChirps(): Observable<any>{
     return this.http
       .get(ChirpsService.api)
   }
-  getChirpsByUser(userId: number): Observable<any>{
-    return this.http
-      .get(`${ChirpsService.api}`)
-  }
-  getChirp(id:number): Observable<any>{
+
+  getChirp(id: number): Observable<any>{
     return this.http
       .get(`${ChirpsService.api}/${id}`)
   }
-  createChirp(chirp:{username:string, message: string}): Observable<any> {
-    return this.http.post(ChirpsService.api, chirp)
+  
+  createChirp(chirp: {username: string, message: string}): Observable<any> {
+    return this.http
+      .post(ChirpsService.api, chirp)
   }
-
 }
-
-
-
-

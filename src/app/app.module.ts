@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { HomeviewComponent } from './views/homeview/homeview.component';
 import { ListviewComponent } from './views/listview/listview.component';
@@ -24,15 +25,16 @@ import { ChirpsService } from './services/chirps/chirps.service';
 
 const routes: Routes = [
   { 
+    path: '',
+    redirectTo: 'homeview',
+    pathMatch: 'full',
+  },
+  { 
     path: 'signview',
     component: SignviewComponent
   },
-  { 
-    path: '', 
-    component: AppComponent
-  },
-  { 
-    path: 'Homeview', 
+  {
+    path: 'homeview',
     component: HomeviewComponent
   },
   { 
@@ -62,7 +64,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule,
+    RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
@@ -73,7 +75,8 @@ const routes: Routes = [
     MatInputModule, 
     MatSelectModule, 
     MatToolbarModule, 
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [
     UsersService,
