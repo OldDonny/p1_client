@@ -1,3 +1,35 @@
+
+ <h1>Welcome Back to Chirper!</h1>
+ <form [formGroup]="loginForm" novalidate>
+  <div class="form-container">
+  
+   
+
+    <label class="center-block">Username
+      <input type="text"  formControlName="username" class="form-control" required>
+    </label>
+
+    
+
+    <label class="center-block">Password
+      <input type="text"  formControlName="password" class="form-control" required>
+    </label>
+</div>
+    </form> 
+    <a routesLink="../homeview">
+    <input type="submit" class="btn" value="Sign Me in"> <!-- route to chirp page -->
+  </a>
+
+<p>Form Value: {{loginForm.value | json}} </p>
+
+<p>Form Status: {{loginForm.status | json}} </p>
+
+
+
+
+
+
+
 <p>
   signinform works!
 </p>
