@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
+import { Routes, RouterModule} from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,6 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  
 
 }

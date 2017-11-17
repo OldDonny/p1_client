@@ -1,3 +1,31 @@
-<p>
-  signupform works!
-</p>
+
+ <h1>New User? Sign up Here!</h1>
+ <form [formGroup]="Form" novalidate>
+  <div class="form-container">
+  
+    <label class="center-block">First Name  Last Name
+      <input type="text" formControlName="firstnamelastname" class="form-control" required>
+    </label>
+
+    <label class="center-block">Username
+      <input type="text"  formControlName="username" class="form-control" required>
+    </label>
+
+    <label class="center-block">Email
+      <input type="text" formControlName="email" class="form-control">
+    </label>
+
+    <label class="center-block">Password
+      <input type="text"  formControlName="password" class="form-control" required>
+    </label>
+</div>
+    </form> 
+
+    <input type="submit" class="btn" value="MakemyAccount"> <!-- route to chirp page -->
+  
+
+<p>Form Value: {{Form.value | json}} </p>
+
+<p>Form Status: {{Form.status | json}} </p>
+
+
