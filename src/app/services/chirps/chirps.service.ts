@@ -1,8 +1,33 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http'
+import {Observable} from 'rxjs/Rx'
+
+import 'rxjs/add/operator/map'
 
 @Injectable()
 export class ChirpsService {
+  static api: string = '/api/chirps'
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
+
+  getChirps(): Observable<any>{
+    return this.http
+      .get(ChirpsService.api)
+  }
+  getChirpsByUser(userId:number):Observable<any>{
+    return this.htpp
+      .get(`${ChirpsService.ap}`)
+  }
+  getChirp(id:number): Observable<any>{
+    return this.http
+      .get(`${ChirpsService.api}/${id}`)
+  }
+  createChirp(chirp:{username:string, message:string}):Observable<any>{
+    return this.http.post(ChirpsService.api, chirp)
+  }
 
 }
+
+
+
+

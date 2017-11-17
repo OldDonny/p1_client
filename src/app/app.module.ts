@@ -18,6 +18,8 @@ import { SingleComponent } from './items/single/single.component';
 import { NavbarComponent } from './items/navbar/navbar.component';
 import { FooterComponent } from './items/footer/footer.component';
 import { UserinfoComponent } from './items/userinfo/userinfo.component';
+import { UsersService } from './services/users/users.service';
+import { ChirpsService } from './services/chirps/chirps.service';
 
 
 const routes: Routes = [
@@ -73,7 +75,10 @@ const routes: Routes = [
     MatToolbarModule, 
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    UsersService,
+    ChirpsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
