@@ -1,13 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule} from '@angular/router';
 import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-
-
-
+import { MatButtonModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatIconModule } from '@angular/material';
 
 import { HomeviewComponent } from './views/homeview/homeview.component';
 import { ListviewComponent } from './views/listview/listview.component';
@@ -23,10 +21,22 @@ import { UserinfoComponent } from './items/userinfo/userinfo.component';
 
 
 const routes: Routes = [
-{ path: 'signinform', component: SigninformComponent},
-{ path: ' ', component: AppComponent},
-{ path: 'signupform', component: SignupformComponent},
-{ path: 'chirpform', component: ChirpformComponent}
+  { 
+    path: 'signview',
+    component: SignviewComponent
+  },
+  { 
+    path: '', 
+    component: AppComponent
+  },
+  { 
+    path: 'Homeview', 
+    component: HomeviewComponent
+  },
+  { 
+    path: 'listview', 
+    component: ListviewComponent
+  }
 ];
 
 
@@ -53,7 +63,15 @@ const routes: Routes = [
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    MatButtonModule, 
+    MatCardModule, 
+    MatMenuModule, 
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatSelectModule, 
+    MatToolbarModule, 
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
