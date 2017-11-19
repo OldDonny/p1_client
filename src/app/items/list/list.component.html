@@ -1,12 +1,9 @@
-<h2>LISTVIEW CHIRPS</h2>
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-rel="stylesheet">
+<h2>LISTVIEW</h2>
 
 <mat-card class="postcards" *ngFor="let chirp of chirps">
   <mat-card-header>
-      <mat-card-title style="font-weight:bold"> {{ chirp.name }} </mat-card-title>
-      <mat-card-subtitle> {{ chirp.handle }} </mat-card-subtitle>
+      <mat-card-title style="font-weight:bold"> {{ chirp.name | uppercase }} </mat-card-title>
+      <mat-card-subtitle> @{{ chirp.username }} </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
       {{ chirp.message }} 
