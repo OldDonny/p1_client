@@ -13,7 +13,7 @@ import { DialogComponent } from '../../dialog/dialog.component';
 export class ListComponent implements OnInit {
   chirps: any;
   username: string;
-  chirp: string;
+  message: string;
 
   constructor(
     private svc: ChirpsService,
@@ -25,18 +25,13 @@ export class ListComponent implements OnInit {
     {
       width:'10px',
       data: {
-        chirp: this.chirp,
+        message: this.message,
         username: this.username
       }
     });
     
   }
   
-
-
-
-
-
   ngOnInit() {
     this.svc.getChirps()
       .subscribe((res) => this.chirps = res)
