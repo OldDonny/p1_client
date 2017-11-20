@@ -3,9 +3,15 @@
     <img id="birdlogo" src="http://www.aberke.com/static/img/twitter_bird.png">
   </span>
     <h1 id="titlecolor">Chirper</h1>
-  <span class="fill-remaining-space"></span>
-   <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-  
+  <span class="spacer"></span>
+  <mat-menu #appMenu="matMenu">
+      <button mat-menu-item> Settings </button>
+      <button mat-menu-item> Help </button>
+    </mat-menu>
+    
+    <button mat-icon-button [matMenuTriggerFor]="appMenu">
+       <mat-icon>more_vert</mat-icon>
+    </button>
 </mat-toolbar>
 
 
