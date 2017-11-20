@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChirpsService } from '../../services/chirps/chirps.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { DialogComponent } from '../../dialog/dialog.component';
 
 
 @Component({
@@ -10,8 +12,30 @@ import { ChirpsService } from '../../services/chirps/chirps.service';
 
 export class ListComponent implements OnInit {
   chirps: any;
+  username: string;
+  chirp: string;
 
-  constructor(private svc: ChirpsService) { }
+  constructor(
+    private svc: ChirpsService,
+    public dialog: MatDialog          
+  ) { }
+
+  openDialog(): void{
+    let dialogRef= this.dialog.open(DialogComponent, 
+    {
+      width:'10px',
+      data: {
+        chirp: this.chirp,
+        username: this.username
+      }
+    });
+    
+  }
+  
+
+
+
+
 
   ngOnInit() {
     this.svc.getChirps()
