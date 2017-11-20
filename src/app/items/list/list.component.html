@@ -1,6 +1,6 @@
 <h2>LISTVIEW</h2>
 
-<mat-card class="postcards" *ngFor="let chirp of chirps">
+<mat-car ngIf*'!!chirp' *ngFor="let chirp of chirps">
   <mat-card-header>
       <mat-card-title style="font-weight:bold"> {{ chirp.name | uppercase }} </mat-card-title>
       <mat-card-subtitle> @{{ chirp.username }} </mat-card-subtitle>
