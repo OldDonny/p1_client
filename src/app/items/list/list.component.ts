@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ChirpsService } from '../../services/chirps/chirps.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DialogComponent } from '../../dialog/dialog.component';
-
+import * as $ from 'jquery'
 
 @Component({
   selector: 'app-list',
@@ -27,6 +27,7 @@ export class ListComponent implements OnInit {
       height:'220px',
       width:'420px',
       data: {
+        name: chirp.name,
         username: chirp.username,
         message: chirp.message
       }
