@@ -5,8 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatIconModule, MatDialog } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material'
 
 import { HomeviewComponent } from './views/homeview/homeview.component';
 import { ListviewComponent } from './views/listview/listview.component';
@@ -21,6 +22,7 @@ import { FooterComponent } from './items/footer/footer.component';
 import { UserinfoComponent } from './items/userinfo/userinfo.component';
 import { UsersService } from './services/users/users.service';
 import { ChirpsService } from './services/chirps/chirps.service';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 const routes: Routes = [
@@ -59,9 +61,11 @@ const routes: Routes = [
     SingleComponent,
     NavbarComponent,
     FooterComponent,
-    UserinfoComponent
+    UserinfoComponent,
+    DialogComponent
   ],
   imports: [
+    MatDialogModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
