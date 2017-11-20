@@ -64,6 +64,9 @@ const routes: Routes = [
     UserinfoComponent,
     DialogComponent
   ],
+
+  entryComponents: [ DialogComponent, ],
+
   imports: [
     MatDialogModule,
     BrowserModule,

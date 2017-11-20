@@ -23,7 +23,7 @@ export class ListComponent implements OnInit {
   openDialog(): void{
     let dialogRef= this.dialog.open(DialogComponent, 
     {
-      width:'10px',
+      width:'360px',
       data: {
         message: this.message,
         username: this.username
@@ -31,7 +31,7 @@ export class ListComponent implements OnInit {
     });
     
   }
-  
+
   ngOnInit() {
     this.svc.getChirps()
       .subscribe((res) => this.chirps = res)
