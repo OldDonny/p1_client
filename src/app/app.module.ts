@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { MatButtonModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatIconModule, MatDialog } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDialogModule} from '@angular/material'
+import {MatDialogModule} from '@angular/material';
 
 import { HomeviewComponent } from './views/homeview/homeview.component';
 import { ListviewComponent } from './views/listview/listview.component';

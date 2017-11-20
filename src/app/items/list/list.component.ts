@@ -24,7 +24,7 @@ export class ListComponent implements OnInit {
   openDialog(chirp): void{
     let dialogRef= this.dialog.open(DialogComponent, 
     {
-      height:'300px'
+      height:'220px',
       width:'420px',
       data: {
         username: chirp.username,
