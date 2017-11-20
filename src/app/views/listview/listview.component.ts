@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ChirpsService } from '../../services/chirps/chirps.service';
 
 @Component({
   selector: 'app-listview',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listview.component.scss']
 })
 export class ListviewComponent implements OnInit {
+  chirps: Array<any>;
 
-  constructor() { }
+  constructor(protected svc: ChirpsService) { }
 
   ngOnInit() {
+    this.svc.getChirps()
+      .subscribe((res) => {
+        console.log(res);
+        this.chirps = res;
+      });
   }
 
 }
