@@ -16,8 +16,8 @@ export class SigninformComponent  {
    constructor(private fb: FormBuilder){
      this.loginForm = this.fb.group({
        
-       username: [' ', Validators.required],
-       password: [' ', Validators.required]
+       username: ['', Validators.required],
+       password: ['', Validators.required]
        
      });
     
