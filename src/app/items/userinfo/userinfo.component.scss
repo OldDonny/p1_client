@@ -1,0 +1,60 @@
+// styling for profile card
+
+.center {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    height: 299px;
+    width: 320px;
+    background:#CF6766;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.3);
+}
+
+.profile {
+	display: inline;
+    text-align: center;
+    
+    #profile-card-cover {
+        height:50%;
+        width:100%;
+        background-image:url(http://i.imgur.com/hJcZOWD.jpg);
+        background-size:cover;
+      }
+	
+	.image {
+		position: absolute;
+        width:114px;
+        height:114px;
+        top:50%;
+        left:50%;
+        margin:-77px 0 0 -57px;
+        border-radius:100%;
+        border: solid white;
+		
+		
+		img {
+			display: block;
+			border-radius: 50%;
+            background: #F5E8DF;
+            width: 114px;
+            height: 114px;
+		}
+		
+	}
+	
+	.name {
+        font-size: 30px;
+		font-weight: 600;
+        margin-top: 50px;
+        color: white;
+	}
+	
+	.handle {
+		font-size: 18px;
+        line-height: 15px;
+        margin-top: 3px;
+	}
+	
+}
