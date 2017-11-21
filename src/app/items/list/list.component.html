@@ -1,28 +1,35 @@
-<h2>LISTVIEW</h2>
+<mat-sidenav-container class='sidenav-container'>
+    <mat-sidenav mode='side' opened='true' class='sidenav'>
+        <mat-card class='profile-card'>
+            <h1>blah blah blah</h1>
+        </mat-card>
+    </mat-sidenav>
 
-<ng-container *ngIf="!!chirps">
-    <mat-card *ngFor="let chirp of chirps">
-        <mat-card-header>
-            <mat-card-title style="font-weight:bold"> {{ chirp.name | uppercase }} </mat-card-title>
-            <mat-card-subtitle> @{{ chirp.username }} </mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-            {{ chirp.message }} 
-        </mat-card-content>
-        <mat-card-actions class="button-row" style="color:white">
-            <button mat-icon-button>
-                <mat-icon>reply</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>autorenew</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>thumb_up</mat-icon>
-            </button>
-            <button (click)="openDialog(chirp)" mat-icon-button>
-                <mat-icon>message</mat-icon>
-            </button>
-        </mat-card-actions>
-    </mat-card>
-</ng-container>
+    <h2>DASHBOARD</h2>
 
+    <ng-container *ngIf="!!chirps">
+        <mat-card *ngFor="let chirp of chirps">
+            <mat-card-header>
+                <mat-card-title style="font-weight:bold"> {{ chirp.name | uppercase }} </mat-card-title>
+                <mat-card-subtitle> @{{ chirp.username }} </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                {{ chirp.message }} 
+            </mat-card-content>
+            <mat-card-actions class="button-row" style="color:white">
+                <button mat-icon-button>
+                    <mat-icon>reply</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>autorenew</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>thumb_up</mat-icon>
+                </button>
+                <button (click)="openDialog(chirp)" mat-icon-button>
+                    <mat-icon>message</mat-icon>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </ng-container>
+</mat-sidenav-container>

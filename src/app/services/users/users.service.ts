@@ -6,23 +6,23 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class UsersService {
-static api: string = 'http://loacalhost:3000/api/users'
+static api: string = 'api/users'
 
 
   constructor(private http: HttpClient) { }
 
-  getUsers():Observable<any>{
+  getUsers(): Observable<any>{
     return this.http
       .get(UsersService.api)
   }
-  getUser(id:number):Observable<any>{
+  getUser(id: number): Observable<any>{
     return this.http
       .get(`${UsersService.api}/${id}`)
   }
-  createUser(user: {username:string, email:string, password:string}):Observable<any>{
+  createUser(user: {name: string, username: string, email: string, password: string}): Observable<any> {
     return this.http.post(UsersService.api, user)
   }
-  deleteUser(id:number):Observable<any>{
+  deleteUser(id: number): Observable<any>{
     return this.http.delete(`${UsersService.api}/${id}`)
   }
 }

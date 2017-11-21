@@ -2,17 +2,21 @@
 
 mat-toolbar {
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     left: 0;
 }
 
 body {
-    margin-top: 5em;
+    margin: 4em 0em;
     text-align: center;
 }
 
 mat-card {
     margin: 1em;
     text-align: left;
+}
+
+.profile-card {
+    max-width: 10em;
 }

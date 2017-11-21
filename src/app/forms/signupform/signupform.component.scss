@@ -1,6 +1,9 @@
-.form-container{
-     background-color: aqua;
-      display: grid;
-      width: 750px;
+.form-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 600px;
+    * {
+        width: 100%;
+    }
 }
-

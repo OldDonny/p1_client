@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-import { MatButtonModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatIconModule, MatDialog } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatMenuModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatToolbarModule, MatIconModule, MatDialog, MatSidenav } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material';
 
@@ -23,6 +23,9 @@ import { UserinfoComponent } from './items/userinfo/userinfo.component';
 import { UsersService } from './services/users/users.service';
 import { ChirpsService } from './services/chirps/chirps.service';
 import { DialogComponent } from './dialog/dialog.component';
+import { SidenavComponent } from './items/sidenav/sidenav.component';
+import {MatSidenavModule} from '@angular/material';
+
 
 
 const routes: Routes = [
@@ -62,7 +65,8 @@ const routes: Routes = [
     NavbarComponent,
     FooterComponent,
     UserinfoComponent,
-    DialogComponent
+    DialogComponent,
+    SidenavComponent
   ],
 
   entryComponents: [ DialogComponent, ],
@@ -83,6 +87,7 @@ const routes: Routes = [
     MatSelectModule, 
     MatToolbarModule, 
     MatIconModule,
+    MatSidenavModule,
     BrowserAnimationsModule
   ],
   providers: [
