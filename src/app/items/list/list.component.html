@@ -7,7 +7,7 @@
 
     <h2>DASHBOARD</h2>
 
-    <ng-container *ngIf="!!chirps">
+    <ng-container *ngIf="!!chirps" class='chirp-card'>
         <mat-card *ngFor="let chirp of chirps">
             <mat-card-header>
                 <mat-card-title style="font-weight:bold"> {{ chirp.name | uppercase }} </mat-card-title>

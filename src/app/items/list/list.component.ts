@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ChirpsService } from '../../services/chirps/chirps.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DialogComponent } from '../../dialog/dialog.component';
-import * as $ from 'jquery'
 
 @Component({
   selector: 'app-list',
