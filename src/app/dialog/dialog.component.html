@@ -1,6 +1,8 @@
 <mat-card>
-  <mat-card-header>
-    {{data.username}}
-  </mat-card-header>
-  <mat-card-content>{{data.message}}</mat-card-content>
+  <mat-card-content class="who">
+    <h5>{{data.name}}</h5>
+    <p>@{{data.username}}</p>
+    
+  </mat-card-content>
+  <mat-card-content><p>{{data.message}}</p></mat-card-content>
 </mat-card>
