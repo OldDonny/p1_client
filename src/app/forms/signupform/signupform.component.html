@@ -1,5 +1,30 @@
 
- <h1>New User? Sign up Here!</h1>
+ 
+ 
+ <mat-card class="ex">
+<h1>New User? Sign up Here!</h1>
+
+  <mat-form-field>
+    <input matInput placeholder="Name">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput placeholder="Username">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email">
+  </mat-form-field>
+  
+
+      <mat-form-field>
+          <input matInput placeholder="Password">
+      </mat-form-field>
+  
+</mat-card>
+
+
+
  <!-- <form [formGroup]="Form" novalidate>
   <div class="form-container">
   
@@ -21,27 +46,11 @@
 </div>
     </form>  -->
 
-    <input type="submit" class="btn" value="MakemyAccount"> <!-- route to chirp page -->
+    
   
 
-<p>Form Value: {{Form.value | json}} </p>
 
-<p>Form Status: {{Form.status | json}} </p>
 
-<div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
 
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
 
 
