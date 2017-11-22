@@ -1,20 +1,17 @@
-.main-container {
+.mat-app-background {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     flex-direction: column;
-    background: url('https://www.globaletraining.ca/wp-content/uploads/2015/05/3d-abstract-black-dark-geometry-2501884-2560x1600.png') no-repeat center; 
 
     .form-container {
-        width: 600px;
+        width: 40em;
         text-align: center;
-
         mat-form-field {
             display: block;
         }
     }
-    
     h1 {
         display: block;
         color: white;

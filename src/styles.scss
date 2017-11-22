@@ -1,5 +1,6 @@
 @import "~@angular/material/prebuilt-themes/purple-green.css";
 
+
 mat-toolbar {
     position: fixed;
     z-index: 1000;
@@ -8,10 +9,9 @@ mat-toolbar {
 }
 
 body {
-    margin: 4em 0em;
+    margin: 4em 0em 0em 0em;
     text-align: center;
 }
-
 
 mat-card {
     margin: 1em;
@@ -20,4 +20,12 @@ mat-card {
 
 .profile-card {
     max-width: 10em;
+    height: 15em;
+    .pcdiv {
+        border: 2px solid white;
+        width: 7em;
+        height: 7em;
+        border-radius: 50%;
+    }
 }
+
