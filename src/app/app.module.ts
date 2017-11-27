@@ -70,7 +70,8 @@ const routes: Routes = [
   ],
 
   entryComponents: [ 
-    SigninformComponent 
+    SigninformComponent,
+    DialogComponent
   ],
   imports: [
     MatDialogModule,
