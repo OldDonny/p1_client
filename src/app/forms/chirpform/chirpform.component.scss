@@ -1,3 +1,4 @@
+
 .form-container {
     // width: 30em;
     text-align: right;
@@ -5,3 +6,35 @@
         width: 100%;
     }
 }
+
+//  .profile{
+//     display: table;
+//      background-color: white;
+//     color: #000000;
+// }
+
+.feed{
+    margin: auto 25%;
+    top: 9px;
+    right: 286px;
+    width: 93%;
+    // background-color:blanchedalmond;
+}
+
+.thoughts{
+    margin: auto 25%;
+    text-align: center;
+    width: 86%;
+    right: 20%;
+    // background-color: blue;
+    
+}
+
+ .thoughts #textarea{
+     display: initial;
+ }
+
+// .thoughts #go{
+//     display: block;
+// }
+
