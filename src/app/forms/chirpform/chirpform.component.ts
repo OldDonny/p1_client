@@ -19,7 +19,7 @@ export class ChirpformComponent implements OnInit {
     private Chirpsvc: ChirpsService
   ) { 
     this.form = this.fb.group({
-      chirp: ['', Validators.required] ,
+      chirp: ['', Validators.maxLength(240)]
     })
   }
 
