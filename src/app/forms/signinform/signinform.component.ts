@@ -31,7 +31,7 @@ export class SigninformComponent  {
  login(username:string, password:string): void  {
    let thislogin={ username, password}
  if(this.loginForm.valid){
-   
+   console.log(thislogin)
    this.loginsvc.login(thislogin)
    .subscribe(Responce =>{
      
