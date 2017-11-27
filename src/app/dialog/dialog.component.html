@@ -4,4 +4,5 @@
     <p>@{{data.username}}</p>
   </mat-card-content>
   <mat-card-content><p>{{data.message}}</p></mat-card-content>
+  <button (click)= 'deleteChirp(data.id)' (click)="refresh()" (click)= 'onNoClick()'>Delete Chirp</button>
 </mat-card>

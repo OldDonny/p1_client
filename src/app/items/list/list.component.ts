@@ -26,20 +26,17 @@ export class ListComponent implements OnInit {
       height:'220px',
       width:'420px',
       data: {
+        id: chirp.id,
         name: chirp.name,
         username: chirp.username,
         message: chirp.message
       }
+
     });
     
   }
 
-  deleteChirp(){
-    this.svc.deleteChirp(this.chirps.id)
-    .subscribe(()=> {
-      
-    })
-  }
+ 
 
   ngOnInit() {
 
