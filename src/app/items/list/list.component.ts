@@ -34,6 +34,13 @@ export class ListComponent implements OnInit {
     
   }
 
+  deleteChirp(){
+    this.svc.deleteChirp(this.chirps.id)
+    .subscribe(()=> {
+      
+    })
+  }
+
   ngOnInit() {
 
   }

@@ -25,4 +25,11 @@ export class ChirpsService {
     return this.http
       .post(ChirpsService.api, chirp)
   }
+
+  deleteChirp(id:number): Observable<any> {
+    return this.http
+      .delete(`${ChirpsService.api}/${id}`)
+  }
 }
+
+  

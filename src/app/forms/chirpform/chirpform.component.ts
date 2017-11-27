@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormBuilder, Validators, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { UsersService } from '../../services/users/users.service';
 import { Router, RouterModule } from '@angular/router';
+import { ChirpsService } from '../../services/chirps/chirps.service';
 
 
 @Component({
@@ -14,11 +15,23 @@ export class ChirpformComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private svc: UsersService
+    private Usersvc: UsersService,
+    private Chirpsvc: ChirpsService
   ) { 
     this.form = this.fb.group({
       chirp: ['', Validators.required] ,
     })
+  }
+
+  newChirp(chirp:string){
+    let thischirp={username:'example', message: chirp}
+    if(this.form.valid){
+      console.log(chirp)
+      this.Chirpsvc.createChirp(thischirp)
+      .subscribe(Responce =>{
+        this.router.navigate(['/listview'])
+      })
+    }
   }
 
   ngOnInit() {

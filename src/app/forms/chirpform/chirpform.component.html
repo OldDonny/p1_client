@@ -2,10 +2,10 @@
 <mat-card class='form-container'>
     <ng-container novalidate [formGroup]='form'>
         <mat-form-field>
-            <input matInput formControlName='chirp' name='chirp' placeholder='Chirp something'>
+            <input #sendchirp matInput formControlName='chirp' name='chirp' placeholder='Chirp something'>
         </mat-form-field>
         <mat-card-actions>
-            <button mat-raised-button>Chirp</button>
+            <button (click)='newChirp(sendchirp.value)' mat-raised-button>Chirp</button>
         </mat-card-actions>
     </ng-container>
 </mat-card>
