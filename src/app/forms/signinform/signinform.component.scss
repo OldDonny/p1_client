@@ -1,7 +1,12 @@
 .welcome{
     display: inline-flex;
     flex-direction: column;
-    width: 40%;
     padding: 35px;
     text-align: center;
+}
+
+// to get rid of angular material modal dialog box
+mat-card {
+    border: none;
+    box-shadow: none !important;
 }

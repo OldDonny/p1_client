@@ -1,20 +1,25 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Inject } from '@angular/core';
 import { FormsModule, FormBuilder, Validators, FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 import { UsersService } from '../../services/users/users.service';
+import { SigninformComponent } from '../signinform/signinform.component';
 
 @Component({
   selector: 'app-signupform',
   templateUrl: './signupform.component.html',
   styleUrls: ['./signupform.component.scss']
 })
-export class SignupformComponent {
- form: FormGroup;
 
-  constructor(
+export class SignupformComponent {
+  form: FormGroup;
+
+  constructor (
     private fb: FormBuilder,
     private router: Router,
-    private svc: UsersService
+    private svc: UsersService,
+    public dialog: MatDialog,
+
   ){
     this.form = this.fb.group({
       name: ['', Validators.required],
@@ -24,15 +29,17 @@ export class SignupformComponent {
     });
 }
 
-    createNewUser() {
-      let newUser = (this.form.value)
-      this.svc.createUser(newUser)
-        .subscribe(() => {
-          this.router.navigate(['/listview'])
-        });
-    }
+// For Sign Up Form 
+  createNewUser() {
+    let newUser = (this.form.value)
+    this.svc.createUser(newUser)
+      .subscribe(() => {
+        this.router.navigate(['/listview'])
+      });
+  }
 
-    
-
-
+// For Sign In Modal
+  openDialog() {
+    this.dialog.open(SigninformComponent)
+  }
 }

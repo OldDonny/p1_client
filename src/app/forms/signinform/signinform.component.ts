@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { FormsModule, FormBuilder, Validators, FormGroup, FormControl, ReactiveFormsModule} from '@angular/forms';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 
 
 
@@ -13,7 +14,9 @@ export class SigninformComponent  {
   loginForm: FormGroup;
   
  
-   constructor(private fb: FormBuilder){
+   constructor(@Inject(MAT_DIALOG_DATA) private data: any, 
+                private fb: FormBuilder){
+
      this.loginForm = this.fb.group({
        
        username: ['', Validators.required],

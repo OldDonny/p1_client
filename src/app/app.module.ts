@@ -69,8 +69,9 @@ const routes: Routes = [
     SidenavComponent
   ],
 
-  entryComponents: [ DialogComponent, ],
-
+  entryComponents: [ 
+    SigninformComponent 
+  ],
   imports: [
     MatDialogModule,
     BrowserModule,
