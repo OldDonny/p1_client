@@ -1,19 +1,22 @@
 .mat-app-background {
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-top: 7em;
     height: 100vh;
     flex-direction: column;
+    img {
+        width: 150px;
+        margin: 1em;
+    }
 
     .form-container {
-        width: 40em;
+        width: 30em;
         text-align: center;
         mat-form-field {
             display: block;
         }
     }
-    h1 {
-        display: block;
+    h3 {
         color: white;
     }
 }

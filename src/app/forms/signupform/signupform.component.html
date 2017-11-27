@@ -1,9 +1,8 @@
-<body class="mat-app-background">
-    
-    <h1>Chirper</h1>
-    
+  <body class="mat-app-background">
+      <img src="http://www.aberke.com/static/img/twitter_bird.png">
     <mat-card class='form-container'>
-      <div novalidate [formGroup]='form' (ngSubmit)='createNewUser()'>
+      <mat-card-title>Sign up</mat-card-title>
+      <ng-container novalidate [formGroup]='form' (ngSubmit)='createNewUser()'>
         <mat-form-field>
           <input matInput formControlName='name' name='name' placeholder='Name'>
         </mat-form-field>
@@ -17,10 +16,11 @@
           <input matInput formControlName='password' name='password' placeholder='Password'>
         </mat-form-field>
         <mat-card-actions>
-          <button mat-raised-button>Sign Up!</button>
+          <button mat-raised-button>Create Account</button>
         </mat-card-actions>
-      </div>
+      </ng-container>
     </mat-card>
+    <h3 class='mat-h3'>Already a member? <button mat-button>Sign in</button></h3>
   </body>
 
 

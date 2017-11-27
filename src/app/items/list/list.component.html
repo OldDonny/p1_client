@@ -7,8 +7,7 @@
         </mat-card>
     </mat-sidenav>
 
-    <h2>DASHBOARD</h2>
-
+    <app-chirpform></app-chirpform>
     <ng-container *ngIf="!!chirps" class='chirp-card'>
         <mat-card *ngFor="let chirp of chirps">
             <mat-card-header>
