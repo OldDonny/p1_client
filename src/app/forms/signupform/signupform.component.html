@@ -2,7 +2,7 @@
       <img src="http://www.aberke.com/static/img/twitter_bird.png">
     <mat-card class='form-container'>
       <mat-card-title>Sign up</mat-card-title>
-      <ng-container novalidate [formGroup]='form' (ngSubmit)='createNewUser()'>
+      <form novalidate [formGroup]='form' (ngSubmit)='createNewUser()'>
         <mat-form-field>
           <input matInput formControlName='name' name='name' placeholder='Name'>
         </mat-form-field>
@@ -18,7 +18,7 @@
         <mat-card-actions>
           <button mat-raised-button>Create Account</button>
         </mat-card-actions>
-      </ng-container>
+      </form>
     </mat-card>
     <h3 class='mat-h3'>Already a member? <button mat-button (click)="openDialog()">Sign in</button></h3>
   </body>

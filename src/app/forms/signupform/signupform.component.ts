@@ -31,6 +31,7 @@ export class SignupformComponent {
 
 // For Sign Up Form 
   createNewUser() {
+    console.log('ello')
     let newUser = (this.form.value)
     this.svc.createUser(newUser)
       .subscribe(() => {
