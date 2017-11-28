@@ -9,19 +9,23 @@ import { SubsService } from '../../services/subs/subs.service';
   styleUrls: ['./userview.component.scss']
 })
 export class UserviewComponent implements OnInit {
-  users: Array<any>
-  constructor(protected svc: UsersService,
-              protected csvc: ChirpsService,
-              protected ssvc: SubsService) { }
+  users: any;
+  constructor(private svc: UsersService,
+              private csvc: ChirpsService,
+              private ssvc: SubsService) { }
 
   ngOnInit() {
     this.svc.getUsers()
       .subscribe((res) => {
-        console.log(res);
         this.users = res;
       });
   }
-
-
+  
+  getFollowingUsers(id){
+    this.ssvc.getFollowingUsers(id)
+    .subscribe((res) => {
+      this.users = res;
+    })
+  }
 
 }
