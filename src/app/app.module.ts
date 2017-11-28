@@ -47,6 +47,10 @@ const routes: Routes = [
   { 
     path: 'listview', 
     component: ListviewComponent
+  },
+  {
+    path: 'userview',
+    component: UserviewComponent
   }
 ];
 
