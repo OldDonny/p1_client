@@ -9,8 +9,8 @@
     </mat-sidenav>
 
     <app-chirpform></app-chirpform>
-    <ng-container *ngIf="!!chirps" class='chirp-card'>
-        <mat-card *ngFor="let chirp of chirps" (click)="openDialog(chirp)">
+    <ng-container *ngIf="!!chirps">
+        <mat-card  id="list-cards" class='chirp-card' *ngFor="let chirp of chirps" (click)="openDialog(chirp)">
             <mat-card-header>
                 <mat-card-title style="font-weight:bold"> {{ chirp.name | uppercase }} </mat-card-title>
                 <mat-card-subtitle> @{{ chirp.username }} </mat-card-subtitle>

@@ -1,9 +1,18 @@
 .form-container {
-    text-align: right;
+    max-width: 70em;
+    padding: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
     mat-form-field {
-        width: 100%;
+        width: 90%;
+        text-align: left;
+        margin: 0;
+    }
+    mat-input {
+        max-width: 10em;
     }
     mat-card-actions {
         margin: 0;
+        float: right;
     }
 }
