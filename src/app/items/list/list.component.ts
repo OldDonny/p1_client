@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChirpsService } from '../../services/chirps/chirps.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { DialogComponent } from '../../dialog/dialog.component';
@@ -17,7 +18,8 @@ export class ListComponent implements OnInit {
 
   constructor(
     private svc: ChirpsService,
-    public dialog: MatDialog          
+    public dialog: MatDialog,
+    private router: Router          
   ) { }
 
   openDialog(chirp): void{

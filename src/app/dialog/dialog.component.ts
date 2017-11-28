@@ -23,7 +23,6 @@ export class DialogComponent {
     window.location.reload();
   }
 
-
   deleteChirp(){
     this.svc.deleteChirp(this.data.id)
     .subscribe(()=> {
