@@ -27,6 +27,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { SidenavComponent } from './items/sidenav/sidenav.component';
 import { LoginService } from './services/login/login.service';
 import { UserviewComponent } from './views/userview/userview.component';
+import { SubsService } from './services/subs/subs.service';
 
 
 
@@ -102,7 +103,8 @@ const routes: Routes = [
   providers: [
     UsersService,
     ChirpsService,
-    LoginService
+    LoginService,
+    SubsService
   ],
   bootstrap: [AppComponent]
 })
