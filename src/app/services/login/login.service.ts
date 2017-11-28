@@ -20,9 +20,18 @@ export class LoginService {
   }
 
   me(){
-    if (isNil(this.user)){
-      return
-    }
-    return Observable.of(this.user)
+    return new Promise((res, rej) => {
+      if (isNil(this.user)){
+        rej();
+        return;
+      }
+      
+      res(this.user);
+    });
   }
 }
+
+
+
+
+

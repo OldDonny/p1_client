@@ -3,6 +3,7 @@ import { FormsModule, FormBuilder, Validators, FormGroup, FormControl, ReactiveF
 import { UsersService } from '../../services/users/users.service';
 import { Router, RouterModule } from '@angular/router';
 import { ChirpsService } from '../../services/chirps/chirps.service';
+import { LoginService } from '../../services/login/login.service';
 
 
 @Component({
@@ -11,12 +12,14 @@ import { ChirpsService } from '../../services/chirps/chirps.service';
   styleUrls: ['./chirpform.component.scss']
 })
 export class ChirpformComponent implements OnInit {
+  user:any
   form: FormGroup;
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private Usersvc: UsersService,
-    private Chirpsvc: ChirpsService
+    private Chirpsvc: ChirpsService,
+    private loginsvc: LoginService
   ) { 
     this.form = this.fb.group({
       chirp: ['', Validators.maxLength(240)]
@@ -34,7 +37,12 @@ export class ChirpformComponent implements OnInit {
     }
   }
 
+
   ngOnInit() {
+    this.loginsvc.me()
+    .then((user) => {
+      this.user = user
+    });
   }
 
 }

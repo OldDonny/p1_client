@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule, ActivatedRoute, Router} from '@angular/router';
 import { FormsModule, FormBuilder, Validators, FormGroup, FormControl, ReactiveFormsModule} from '@angular/forms';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
+import {MatDialogModule, MAT_DIALOG_DATA,MatDialogRef} from '@angular/material';
 import { LoginService } from '../../services/login/login.service';
 
 
@@ -16,8 +16,10 @@ export class SigninformComponent  {
   
  
    constructor(@Inject(MAT_DIALOG_DATA) private data: any, 
+   public dialogRef: MatDialogRef<SigninformComponent>,
                 private fb: FormBuilder,
-                private loginsvc: LoginService){
+                private loginsvc: LoginService,
+                private router: Router){
 
      this.loginForm = this.fb.group({
        
@@ -27,16 +29,20 @@ export class SigninformComponent  {
      });
     
  }
+ onNoClick(): void {
+  this.dialogRef.close();
+}
 
- login(username:string, password:string): void  {
-   let thislogin={ username, password}
- if(this.loginForm.valid){
-   console.log(thislogin)
-   this.loginsvc.login(thislogin)
-   .subscribe(Responce =>{
-     
-   })
- }
+ login(username:string, password:string): void{
+    let signin={ username, password}
+    if(this.loginForm.valid){
+      this.router.navigate(['/listview'])
+      this.loginsvc.login(signin)
+        .subscribe(() =>{
+    
+         })
+    }
+ 
 }
 
  
