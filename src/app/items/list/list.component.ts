@@ -12,8 +12,8 @@ import { DialogComponent } from '../../dialog/dialog.component';
 export class ListComponent implements OnInit {
   @Input()
   chirps: any;
-  username:any = 'test username';
-  message:any = 'test message';
+  username: any = 'test username';
+  message: any = 'test message';
 
   constructor(
     private svc: ChirpsService,
@@ -23,8 +23,7 @@ export class ListComponent implements OnInit {
   openDialog(chirp): void{
     let dialogRef= this.dialog.open(DialogComponent, 
     {
-      height:'220px',
-      width:'420px',
+      width:'40em',
       data: {
         id: chirp.id,
         name: chirp.name,

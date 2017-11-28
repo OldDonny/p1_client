@@ -1,72 +1,12 @@
 
 <mat-card class='form-container'>
-    <ng-container novalidate [formGroup]='form'>
+    <form novalidate [formGroup]='form'>
         <mat-form-field>
-            <input #sendchirp matInput formControlName='chirp' name='chirp' placeholder='Chirp something'>
+            <input matInput formControlName='chirp' name='chirp' placeholder='Chirp something'>
         </mat-form-field>
         <mat-card-actions>
-            <button (click)='newChirp(sendchirp.value)' mat-raised-button>Chirp</button>
+            <button (click)='newChirp()' mat-raised-button>Chirp</button>
         </mat-card-actions>
-    </ng-container>
+    </form>
 </mat-card>
-
-
-
-
-  <!-- <mat-card class="profile">
-    <mat-card-header>
-      <img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-      <mat-card-title> Stan Smith</mat-card-title>
-    </mat-card-header>
-  @therealStanSmith
-</mat-card> -->
-
-<!-- <mat-card class="thoughts">
-  <h1>Tell the World your opinions...</h1>
-    <mat-form-field id="textarea">
-        <textarea  matInput placeholder=""></textarea>
-      </mat-form-field>
-
-      <button mat-icon-button>
-        <span>
-          <mat-icon aria-hidden="true" role="img" id="bye">delete</mat-icon>
-        </span>
-      </button>
-
-     <button mat-icon-button>
-       <span>
-         <mat-icon aria-hidden="true" role="img" id="go">send</mat-icon>
-       </span>   
-     </button>
-</mat-card>
-
-<div class="container"></div>
-<mat-card class="feed">
-<mat-card-header>
-  <img mat-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-  <mat-card-title>Roger Smith</mat-card-title>
-</mat-card-header>
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique pariatur quas ab quam placeat cum tempore. Iste ipsam, tempore debitis consequuntur necessitatibus sit illum amet optio obcaecati fugit est, commodi itaque. Voluptatum totam eius tempore perferendis cupiditate perspiciatis. Omnis neque, earum tempore voluptates ut explicabo reiciendis sed quod ullam corrupti deserunt, minus nemo minima. Neque maxime ab quas, dolorum sit laudantium, dignissimos quisquam quaerat doloremque itaque, quam natus nihil doloribus maiores nisi! Aperiam dolore inventore voluptatem iste voluptatibus? Natus pariatur, voluptate sunt tenetur odio quibusdam obcaecati voluptatem voluptatibus sit. Iure porro reprehenderit rem repellat quam maiores fugiat et adipisci impedit?
-</p>
-<button mat-icon-button>
-  <span>
-    <mat-icon aria-hidden="true" role="img">delete</mat-icon>
-  </span>
-</button>
-
-<button mat-icon-button>
-    <span>
-    <mat-icon aria-hidden="true" role="img">send</mat-icon>
-    </span>
-</button>
-
-    <button mat-icon-button>
-      <span>
-    <mat-icon aria-hidden="true" role="img">thumb_up</mat-icon>
-      </span>
-    </button>
-
-</mat-card> -->
-
 

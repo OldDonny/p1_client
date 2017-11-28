@@ -26,6 +26,7 @@ import { ChirpsService } from './services/chirps/chirps.service';
 import { DialogComponent } from './dialog/dialog.component';
 import { SidenavComponent } from './items/sidenav/sidenav.component';
 import { LoginService } from './services/login/login.service';
+import { UserviewComponent } from './views/userview/userview.component';
 
 
 
@@ -67,7 +68,8 @@ const routes: Routes = [
     FooterComponent,
     UserinfoComponent,
     DialogComponent,
-    SidenavComponent
+    SidenavComponent,
+    UserviewComponent
   ],
 
   entryComponents: [ 

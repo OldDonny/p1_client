@@ -1,8 +1,13 @@
-<mat-card>
-  <mat-card-content class="who">
-    <h5>{{data.name}}</h5>
-    <p>@{{data.username}}</p>
-  </mat-card-content>
-  <mat-card-content><p>{{data.message}}</p></mat-card-content>
-  <button (click)= 'deleteChirp(data.id)' (click)="refresh()" (click)= 'onNoClick()'>Delete Chirp</button>
+<mat-card class='who'>
+  <mat-card-header>
+    <mat-card-title style='font-weight:bold'>{{data.name | uppercase}}</mat-card-title>
+    <mat-card-subtitle>@{{data.username}}</mat-card-subtitle>
+  </mat-card-header>
+    <mat-card-content>{{data.message}}</mat-card-content>
+  <button mat-icon-button (click)='deleteChirp(data.id)' (click)="refresh()" (click)='onNoClick()'>
+    <mat-icon>delete</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>edit</mat-icon>
+  </button>
 </mat-card>
